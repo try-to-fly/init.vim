@@ -5,7 +5,8 @@ filetype off                  " required
 set ignorecase
 set shell=/bin/dash
 set background=light
-set tabstop=2
+set autoindent expandtab tabstop=2 shiftwidth=2
+
 
 " hi Normal guibg=NONE ctermbg=NONE
 
@@ -52,7 +53,6 @@ let g:coc_global_extensions = [
 	\ 'coc-flutter-tools',
 	\ 'coc-gitignore',
 	\ 'coc-html',
-	\ 'coc-import-cost',
 	\ 'coc-java',
 	\ 'coc-jest',
 	\ 'coc-json',
