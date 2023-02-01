@@ -30,6 +30,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'easymotion/vim-easymotion'
+Plug 'lewis6991/gitsigns.nvim'
 
 
 
@@ -292,3 +293,22 @@ let g:EasyMotion_smartcase = 1
 " JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" ==================== gitsigns.nvim ====================
+lua <<EOF
+require('gitsigns').setup({
+	signs = {
+    add          = { hl = 'GitSignsAdd'   , text = '▎', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'    },
+    change       = { hl = 'GitSignsChange', text = '░', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
+    delete       = { hl = 'GitSignsDelete', text = '_', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
+    topdelete    = { hl = 'GitSignsDelete', text = '▔', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
+    changedelete = { hl = 'GitSignsChange', text = '▒', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
+    untracked    = { hl = 'GitSignsAdd'   , text = '┆', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'    },
+  },
+})
+EOF
+nnoremap H :Gitsigns preview_hunk_inline<CR>
+nnoremap <LEADER>gr :Gitsigns reset_hunk<CR>
+nnoremap <LEADER>gb :Gitsigns blame_line<CR>
+nnoremap <LEADER>g- :Gitsigns prev_hunk<CR>
+nnoremap <LEADER>g= :Gitsigns next_hunk<CR>
