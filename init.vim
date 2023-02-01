@@ -25,6 +25,8 @@ Plug 'tpope/vim-surround'
 Plug 'github/copilot.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'preservim/nerdcommenter'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 
 
 
@@ -268,5 +270,4 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
-
 
