@@ -69,6 +69,7 @@
 		"$HOME/.config/nvim/Ultisnips/",
 		"$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"
 	],
+	"coc.preferences.formatOnSave": true,
 	"coc.preferences.formatOnSaveFiletypes": [
 		"javascript",
 		"typescript",
