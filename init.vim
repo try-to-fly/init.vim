@@ -241,9 +241,10 @@ let g:airline#extensions#tabline#enabled = 1
 
 colorscheme catppuccin-mocha
 
-" vim-floaterm 快捷键配置
-" 开启zsh终端
-nnoremap <silent> <leader>tt :FloatermNew zsh<CR>
+"======================= vim-floaterm 快捷键配置==========================
+"开启zsh终端
+let g:floaterm_shell = 'zsh'
+let g:floaterm_keymap_toggle = '<F12>'
 
 " nerdcommenter 快捷键配置
 " Create default mappings
