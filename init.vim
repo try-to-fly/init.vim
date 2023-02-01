@@ -6,6 +6,8 @@ set ignorecase
 set shell=/bin/dash
 set background=light
 set autoindent expandtab tabstop=2 shiftwidth=2
+set clipboard=unnamed
+
 
 
 " hi Normal guibg=NONE ctermbg=NONE
