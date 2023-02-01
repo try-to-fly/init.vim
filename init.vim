@@ -5,6 +5,7 @@ filetype off                  " required
 set ignorecase
 set shell=/bin/dash
 set background=light
+set tabstop=2
 
 " hi Normal guibg=NONE ctermbg=NONE
 
