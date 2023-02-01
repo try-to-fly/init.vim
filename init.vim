@@ -23,6 +23,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'github/copilot.vim'
+Plug 'voldikss/vim-floaterm'
+
 
 
 
@@ -234,3 +236,7 @@ nnoremap <silent> <leader>gg :LazyGit<CR>
 let g:airline#extensions#tabline#enabled = 1
 
 colorscheme catppuccin-mocha
+
+" vim-floaterm 快捷键配置
+" 开启zsh终端
+nnoremap <silent> <leader>tt :FloatermNew zsh<CR>
