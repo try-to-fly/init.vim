@@ -40,6 +40,9 @@ Plug 'lewis6991/gitsigns.nvim'
 
 call plug#end()
 
+" ==================== 通用快捷键配置 ====================
+" 重新加载配置
+nnoremap <leader>rr :source $MYVIMRC<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
