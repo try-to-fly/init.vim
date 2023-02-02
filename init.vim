@@ -34,6 +34,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'easymotion/vim-easymotion'
 Plug 'lewis6991/gitsigns.nvim'
 
+Plug '907th/vim-auto-save'
 
 
 
@@ -43,6 +44,12 @@ call plug#end()
 " ==================== 通用快捷键配置 ====================
 " 重新加载配置
 nnoremap <leader>rr :source $MYVIMRC<cr>
+
+" =================== autosave ======================
+let g:auto_save=1
+
+" ==================== Telescope ====================
+
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
