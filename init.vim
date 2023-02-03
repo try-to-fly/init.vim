@@ -8,6 +8,8 @@ set shell=/bin/dash
 set background=light
 set autoindent expandtab tabstop=2 shiftwidth=2
 set clipboard=unnamed
+" 换行不添加注释
+set formatoptions-=cro
 
 
 
@@ -34,7 +36,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'easymotion/vim-easymotion'
 Plug 'lewis6991/gitsigns.nvim'
-
 Plug '907th/vim-auto-save'
 
 
