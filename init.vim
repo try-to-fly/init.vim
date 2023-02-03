@@ -1,4 +1,5 @@
-set relativenumber
+set number relativenumber
+set nu rnu
 set nocompatible              " be iMproved, required
 set encoding=UTF-8
 filetype off                  " required
