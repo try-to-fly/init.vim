@@ -39,6 +39,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'easymotion/vim-easymotion'
 Plug 'lewis6991/gitsigns.nvim'
 Plug '907th/vim-auto-save'
+Plug 'Yggdroot/indentLine'
 
 
 
