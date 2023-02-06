@@ -45,6 +45,7 @@ Plug 'luochen1990/rainbow'
 Plug 'pangloss/vim-javascript'
 " :LeaderfInstallCExtension 安装c语言扩展
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+Plug 'windwp/nvim-autopairs'
 
 
 
@@ -405,3 +406,7 @@ noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand
 noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
 noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
 noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
+
+lua << EOF
+require("nvim-autopairs").setup {}
+EOF
