@@ -48,7 +48,7 @@ call plug#end()
 nnoremap <leader>rr :source $MYVIMRC<cr>
 
 " =================== autosave ======================
-let g:auto_save=1
+" let g:auto_save=1
 
 " ==================== Telescope ====================
 
