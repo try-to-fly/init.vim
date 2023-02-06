@@ -10,6 +10,7 @@ set autoindent expandtab tabstop=2 shiftwidth=2
 set clipboard=unnamed
 " 换行不添加注释
 set formatoptions-=cro
+set foldmethod=syntax
 
 
 
@@ -41,6 +42,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug '907th/vim-auto-save'
 Plug 'Yggdroot/indentLine'
 Plug 'luochen1990/rainbow'
+Plug 'pangloss/vim-javascript'
 
 
 
@@ -361,4 +363,9 @@ nnoremap <LEADER>gb :Gitsigns blame_line<CR>
 nnoremap <LEADER>g- :Gitsigns prev_hunk<CR>
 nnoremap <LEADER>g= :Gitsigns next_hunk<CR>
 
-
+" ========= pangloss/vim-javascript ===========
+let g:javascript_plugin_jsdoc = 1
+augroup javascript_folding
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+augroup END
