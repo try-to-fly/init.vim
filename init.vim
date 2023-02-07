@@ -31,6 +31,7 @@ Plug 'kdheepak/lazygit.nvim'
 " 需要安装fugitive才可以在airline中显示git信息
 Plug 'tpope/vim-fugitive'
 Plug 'APZelos/blamer.nvim'
+Plug 'junegunn/gv.vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
