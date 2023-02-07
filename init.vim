@@ -46,7 +46,7 @@ Plug 'pangloss/vim-javascript'
 " :LeaderfInstallCExtension 安装c语言扩展
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'windwp/nvim-autopairs'
-
+Plug 'mhinz/vim-startify'
 
 
 
