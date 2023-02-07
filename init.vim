@@ -10,6 +10,7 @@ set autoindent expandtab tabstop=2 shiftwidth=2
 set clipboard=unnamed
 " 换行不添加注释
 set formatoptions-=cro
+" set foldmethod=syntax
 
 
 
@@ -25,9 +26,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
+" git 插件
 Plug 'kdheepak/lazygit.nvim'
 " 需要安装fugitive才可以在airline中显示git信息
 Plug 'tpope/vim-fugitive'
+Plug 'APZelos/blamer.nvim'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
@@ -365,6 +369,10 @@ nnoremap <LEADER>gr :Gitsigns reset_hunk<CR>
 nnoremap <LEADER>gb :Gitsigns blame_line<CR>
 nnoremap <LEADER>g- :Gitsigns prev_hunk<CR>
 nnoremap <LEADER>g= :Gitsigns next_hunk<CR>
+
+" =================blamer.nvim=================
+let g:blamer_enabled = 1
+let g:blamer_delay = 100
 
 " ========= pangloss/vim-javascript ===========
 let g:javascript_plugin_jsdoc = 1
