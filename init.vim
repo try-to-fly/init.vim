@@ -10,7 +10,6 @@ set autoindent expandtab tabstop=2 shiftwidth=2
 set clipboard=unnamed
 " 换行不添加注释
 set formatoptions-=cro
-set foldmethod=syntax
 
 
 
