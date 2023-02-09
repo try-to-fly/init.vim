@@ -67,11 +67,13 @@ nnoremap <leader>rr :source $MYVIMRC<cr>
 
 " ==================== Telescope ====================
 
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
+nnoremap <leader>ff <cmd>Telescope find_files<cr> " 查询项目文件
+nnoremap <leader>fg <cmd>Telescope live_grep<cr> " 关键词查询
+nnoremap <leader>fb <cmd>Telescope buffers<cr> " 已打开的文件查询
+nnoremap <leader>fr <cmd>Telescope oldfiles<cr> " 最近打开的文件查询
+nnoremap <leader>fc <cmd>Telescope commands<cr> " 查看命令列表
+nnoremap <leader>fh <cmd>Telescope search_history<cr> " 搜索历史记录
+nnoremap <leader>fm <cmd>Telescope git_status<cr> " 查看git变更文件
 " ===================rainbow===================
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
@@ -409,7 +411,7 @@ noremap go :<C-U>Leaderf! rg --recall<CR>
 " should use `Leaderf gtags --update` first
 let g:Lf_GtagsAutoGenerate = 0
 let g:Lf_Gtagslabel = 'native-pygments'
-noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
+" noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
 noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
 noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
 noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
