@@ -36,6 +36,11 @@
 > 查找
 1. <Ctrl-l>：清除查询结果。
 
+> 全局
+1. 全选：ggVG
+2. 全部复制：ggyG
+3. 全部删除：ggdG
+
 ### 插件快捷键
 
 #### 查找
@@ -59,3 +64,4 @@
 
 1. [Vim 多文件编辑：窗口](https://harttle.land/2015/11/14/vim-window.html)
 2. [Nvim 文档](https://neovim.io/doc/user/)
+3. [《VimL 语言编程指北路》目录](https://github.com/lymslive/vimllearn/blob/master/content.md)
