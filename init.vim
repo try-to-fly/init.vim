@@ -51,6 +51,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'windwp/nvim-autopairs'
 Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-repeat'
+Plug 'ggandor/leap.nvim'
 
 " Plug 'puremourning/vimspector'
 
@@ -438,3 +440,5 @@ end
 
 remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
 EOF
+
+lua require('leap').add_default_mappings()
