@@ -54,6 +54,7 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-repeat'
 Plug 'ggandor/leap.nvim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'airblade/vim-gitgutter'
 
 " Plug 'puremourning/vimspector'
 
