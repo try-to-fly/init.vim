@@ -52,6 +52,7 @@ Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'windwp/nvim-autopairs'
 Plug 'mhinz/vim-startify'
 
+" Plug 'puremourning/vimspector'
 
 
 
