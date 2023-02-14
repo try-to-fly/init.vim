@@ -66,6 +66,8 @@ Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 " ==================== 通用快捷键配置 ====================
+imap jk <Esc>
+
 " 重新加载配置
 nnoremap <leader>rr :source $MYVIMRC<cr>
 
