@@ -83,6 +83,8 @@ nnoremap <leader>fr <cmd>Telescope oldfiles<cr> " 最近打开的文件查询
 nnoremap <leader>fc <cmd>Telescope commands<cr> " 查看命令列表
 nnoremap <leader>fh <cmd>Telescope search_history<cr> " 搜索历史记录
 nnoremap <leader>fm <cmd>Telescope git_status<cr> " 查看git变更文件
+nnoremap <leader>fe <cmd>Telescope resume<cr> " 查看上一个结果
+
 " ===================rainbow===================
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
