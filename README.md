@@ -55,6 +55,10 @@
 
 1. F12：开关浮动终端
 
+#### 主题
+1. dracula: https://draculatheme.com/vim
+2. gruvbox8: https://github.com/lifepillar/vim-gruvbox8
+
 ### 常见问题
 
 1. copilot 不提示了

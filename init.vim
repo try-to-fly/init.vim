@@ -58,6 +58,8 @@ Plug 'ggandor/leap.nvim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'lifepillar/vim-gruvbox8'
 
 
 " Plug 'puremourning/vimspector'
@@ -313,7 +315,7 @@ nnoremap <silent> <leader>gg :LazyGit<CR>
 
 let g:airline#extensions#tabline#enabled = 1
 
-colorscheme catppuccin-mocha
+colorscheme dracula
 
 "======================= vim-floaterm 快捷键配置==========================
 "开启zsh终端
