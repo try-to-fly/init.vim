@@ -65,3 +65,4 @@
 1. [Vim 多文件编辑：窗口](https://harttle.land/2015/11/14/vim-window.html)
 2. [Nvim 文档](https://neovim.io/doc/user/)
 3. [《VimL 语言编程指北路》目录](https://github.com/lymslive/vimllearn/blob/master/content.md)
+4. [vim高尔夫](https://www.vimgolf.com/)
