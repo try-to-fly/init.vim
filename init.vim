@@ -60,6 +60,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'projekt0n/github-nvim-theme', { 'tag': 'v0.0.7' }
+Plug 'tomasiser/vim-code-dark'
 
 
 " Plug 'puremourning/vimspector'
@@ -315,7 +317,7 @@ nnoremap <silent> <leader>gg :LazyGit<CR>
 
 let g:airline#extensions#tabline#enabled = 1
 
-colorscheme dracula
+colorscheme codedark
 
 "======================= vim-floaterm 快捷键配置==========================
 "开启zsh终端
