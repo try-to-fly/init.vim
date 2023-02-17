@@ -70,3 +70,7 @@
 2. [Nvim 文档](https://neovim.io/doc/user/)
 3. [《VimL 语言编程指北路》目录](https://github.com/lymslive/vimllearn/blob/master/content.md)
 4. [vim高尔夫](https://www.vimgolf.com/)
+
+
+### 项目看板
+![Alt](https://repobeats.axiom.co/api/embed/699f0efda694ce8c838047640a297b3acee71e1b.svg "Repobeats analytics image")
