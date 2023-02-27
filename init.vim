@@ -399,10 +399,10 @@ let g:blamer_delay = 100
 
 " ========= pangloss/vim-javascript ===========
 let g:javascript_plugin_jsdoc = 1
-augroup javascript_folding
-    au!
-    au FileType javascript setlocal foldmethod=syntax
-augroup END
+" augroup javascript_folding
+"     au!
+"     au FileType javascript setlocal foldmethod=syntax
+" augroup END
 
 " =========== LeaderF =================
 " don't show the help in normal mode
