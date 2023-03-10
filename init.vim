@@ -32,7 +32,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'kdheepak/lazygit.nvim'
 " 需要安装fugitive才可以在airline中显示git信息
 Plug 'tpope/vim-fugitive'
-Plug 'APZelos/blamer.nvim'
 Plug 'junegunn/gv.vim'
 
 Plug 'vim-airline/vim-airline'
@@ -402,10 +401,6 @@ nnoremap <LEADER>gr :Gitsigns reset_hunk<CR>
 nnoremap <LEADER>gb :Gitsigns blame_line<CR>
 nnoremap <LEADER>g- :Gitsigns prev_hunk<CR>
 nnoremap <LEADER>g= :Gitsigns next_hunk<CR>
-
-" =================blamer.nvim=================
-let g:blamer_enabled = 1
-let g:blamer_delay = 100
 
 " ========= pangloss/vim-javascript ===========
 let g:javascript_plugin_jsdoc = 1
