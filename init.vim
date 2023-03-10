@@ -152,7 +152,8 @@ let g:coc_global_extensions = [
 	\ 'coc-vimlsp',
 	\ 'coc-yaml',
 	\ 'coc-yank',
-  \ 'coc-highlight'
+  \ 'coc-highlight',
+  \ 'coc-git'
   \]
 
 
