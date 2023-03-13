@@ -1,5 +1,13 @@
 # nvim 配置
 
+### 如何使用
+
+1. 安装nvim：brew install neovim
+2. 拉取配置：git clone git@github.com:try-to-fly/init.vim.git ~/.config/nvim
+3. 打开nvim：nvim
+4. 安装插件：:PlugInstall
+5. 重启nvim
+
 ### 基础快捷键
 
 > 删除
