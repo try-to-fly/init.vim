@@ -122,14 +122,14 @@ nnoremap <leader>rr :source $MYVIMRC<cr>
 
 " ==================== Telescope ====================
 
-nnoremap <leader>ff <cmd>Telescope find_files<cr> " 查询项目文件
-nnoremap <leader>fg <cmd>Telescope live_grep<cr> " 关键词查询
-nnoremap <leader>fb <cmd>Telescope buffers<cr> " 已打开的文件查询
-nnoremap <leader>fr <cmd>Telescope oldfiles<cr> " 最近打开的文件查询
-nnoremap <leader>fc <cmd>Telescope commands<cr> " 查看命令列表
-nnoremap <leader>fh <cmd>Telescope search_history<cr> " 搜索历史记录
-nnoremap <leader>fm <cmd>Telescope git_status<cr> " 查看git变更文件
-nnoremap <leader>fe <cmd>Telescope resume<cr> " 查看上一个结果
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fr <cmd>Telescope oldfiles<cr>
+nnoremap <leader>fc <cmd>Telescope commands<cr>
+nnoremap <leader>fh <cmd>Telescope search_history<cr>
+nnoremap <leader>fm <cmd>Telescope git_status<cr>
+nnoremap <leader>fe <cmd>Telescope resume<cr>
 
 " ===================rainbow===================
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
