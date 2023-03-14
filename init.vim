@@ -105,7 +105,7 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'itchyny/vim-cursorword'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'RRethy/vim-illuminate'
-
+Plug 'gcmt/wildfire.vim'
 
 
 
@@ -521,3 +521,10 @@ nnoremap <leader>sw <cmd>lua require('spectre').open_visual({select_word=true})<
 vnoremap <leader>s <esc>:lua require('spectre').open_visual()<CR>
 "  search in current file
 nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
+
+" ==================== wildfire ====================
+map <c-b> <Plug>(wildfire-quick-select)
+let g:wildfire_objects = {
+    \ "*" : ["i'", 'i"', "i)", "i]", "i}", "it"],
+    \ "html,xml" : ["at", "it"],
+\ }
