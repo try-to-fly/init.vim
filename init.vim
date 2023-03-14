@@ -1,18 +1,49 @@
-set number relativenumber
-set nu rnu
+" set autochdir " 自动切换到当前文件所在的目录
+set secure " 安全模式, 防止恶意脚本
+set number " 显示行号
+set relativenumber " 显示相对行号
+set cursorline " 高亮当前行
+set tabstop=2 " 设置tab为2个空格
+set shiftwidth=2 " 设置缩进为2个空格
+set expandtab " 使用空格替换tab
+set softtabstop=2 "设置按退格键时删除两个空格宽度
+set autoindent " 自动缩进
+set list " 显示特殊字符, 如制表符, 空格, 换行符
+set listchars=tab:»·,trail:· " 设置特殊字符的显示样式
+set scrolloff=4 " 光标移动到屏幕顶部和底部时保持4行距离
+set ttimeoutlen=0 " 禁用输入法延迟
+set notimeout " 禁用超时
+set viewoptions=cursor,folds,slash,unix " 设置视图选项, 保存光标位置, 折叠, 斜杠, unix格式
+set wrap " 自动换行
+set tw=0 " 置文本宽度为0，即不限制文本宽度
+set indentexpr="" " 设置缩进表达式为空，即不使用特殊的缩进规则
+set foldmethod=indent " 设置折叠方法为缩进
+set foldlevel=99 " 设置折叠级别为99, 即打开所有折叠
+set foldenable " 启用折叠
+set splitright " 水平分屏时，新窗口在右侧
+set splitbelow " 垂直分屏时，新窗口在下方
+set ignorecase " 搜索时忽略大小写
+set smartcase " 搜索时，如果包含大写字母，则区分大小写, 否则忽略大小写
+set inccommand=split " 设置实时替换的显示方式为分割窗口
+set shortmess+=c " 设置不显示替换模式下的提示信息
+set completeopt=longest,noinsert,menuone,noselect,preview " 设置补全选项为只显示最长的匹配项，不自动插入，总是显示菜单，不自动选择第一个匹配项，并显示预览窗口
+set lazyredraw " 设置延迟重绘屏幕，提高性能
+set visualbell " 设置使用可视化提示代替响铃提示
+" set colorcolumn=100 " 设置在第100列显示一个高亮的竖线，用于对齐文本
+set updatetime=100  " 设置更新光标位置和缓冲区状态的时间间隔为100毫秒
+set virtualedit=block " 设置在块选择模式下可以编辑超出文本末尾的位置
+
+
 set nocompatible              " be iMproved, required
 set encoding=UTF-8
 filetype off                  " required
-set ignorecase
 set shell=/bin/dash
 set background=light
-set autoindent expandtab tabstop=2 shiftwidth=2
 set clipboard=unnamed
 " 换行不添加注释
 set formatoptions-=cro
 " 在vim中把所有的数字都当成十进制
 set nrformats=
-" set foldmethod=syntax
 
 
 
@@ -23,6 +54,7 @@ let mapleader=" "
 call plug#begin('~/.vim/plugged')
 
 Plug 'nvim-lua/plenary.nvim'
+Plug 'windwp/nvim-spectre'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
@@ -42,6 +74,8 @@ Plug 'voldikss/vim-floaterm'
 Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+
 " Plug 'easymotion/vim-easymotion'
 Plug 'lewis6991/gitsigns.nvim'
 Plug '907th/vim-auto-save'
@@ -68,6 +102,9 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 
 " Plug 'puremourning/vimspector'
+Plug 'itchyny/vim-cursorword'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'RRethy/vim-illuminate'
 
 
 
@@ -98,60 +135,60 @@ nnoremap <leader>fe <cmd>Telescope resume<cr> " 查看上一个结果
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
 let g:rainbow_conf = {
-\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-\	'operators': '_,_',
-\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-\	'separately': {
-\		'*': {},
-\		'tex': {
-\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-\		},
-\		'lisp': {
-\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-\		},
-\		'vim': {
-\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-\		},
-\		'html': {
-\			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-\		},
-\		'css': 0,
-\		'nerdtree': 0, 
-\	}
+\ 'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+\ 'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\ 'operators': '_,_',
+\ 'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\ 'separately': {
+\   '*': {},
+\   'tex': {
+\     'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+\   },
+\   'lisp': {
+\     'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+\   },
+\   'vim': {
+\     'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+\   },
+\   'html': {
+\     'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\   },
+\   'css': 0,
+\   'nerdtree': 0, 
+\ }
 \}
 
 
 " coc配置
 " ==================== coc.nvim ====================
 let g:coc_global_extensions = [
-	\ 'coc-css',
-	\ 'coc-diagnostic',
-	\ 'coc-docker',
-	\ 'coc-eslint',
-	\ 'coc-explorer',
-	\ 'coc-flutter-tools',
-	\ 'coc-gitignore',
-	\ 'coc-html',
-	\ 'coc-java',
-	\ 'coc-jest',
-	\ 'coc-json',
-	\ 'coc-lists',
-	\ 'coc-omnisharp',
-	\ 'coc-prettier',
-	\ 'coc-prisma',
-	\ 'coc-pyright',
-	\ 'coc-snippets',
-	\ 'coc-sourcekit',
-	\ 'coc-stylelint',
-	\ 'coc-syntax',
-	\ 'coc-tasks',
-	\ 'coc-translator',
-	\ 'coc-tsserver',
-	\ 'coc-vetur',
-	\ 'coc-vimlsp',
-	\ 'coc-yaml',
-	\ 'coc-yank',
+  \ 'coc-css',
+  \ 'coc-diagnostic',
+  \ 'coc-docker',
+  \ 'coc-eslint',
+  \ 'coc-explorer',
+  \ 'coc-flutter-tools',
+  \ 'coc-gitignore',
+  \ 'coc-html',
+  \ 'coc-java',
+  \ 'coc-jest',
+  \ 'coc-json',
+  \ 'coc-lists',
+  \ 'coc-omnisharp',
+  \ 'coc-prettier',
+  \ 'coc-prisma',
+  \ 'coc-pyright',
+  \ 'coc-snippets',
+  \ 'coc-sourcekit',
+  \ 'coc-stylelint',
+  \ 'coc-syntax',
+  \ 'coc-tasks',
+  \ 'coc-translator',
+  \ 'coc-tsserver',
+  \ 'coc-vetur',
+  \ 'coc-vimlsp',
+  \ 'coc-yaml',
+  \ 'coc-yank',
   \ 'coc-highlight',
   \ 'coc-git'
   \]
@@ -381,7 +418,7 @@ let g:NERDToggleCheckAllLines = 1
 " ==================== gitsigns.nvim ====================
 lua <<EOF
 require('gitsigns').setup({
-	signs = {
+  signs = {
     add          = { hl = 'GitSignsAdd'   , text = '▎', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'    },
     change       = { hl = 'GitSignsChange', text = '░', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
     delete       = { hl = 'GitSignsDelete', text = '_', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
@@ -467,3 +504,20 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " =====================translator =========================
 nmap <silent> <Leader>tw <Plug>TranslateW
 
+" ==================== nvim-colorizer.lua ====================
+lua <<EOF
+require 'colorizer'.setup {
+  '*'; -- Highlight all files, but customize some others.
+  css = { rgb_fn = true; }; -- Enable parsing rgb(...) functions in css.
+  html = { names = false; } -- Disable parsing "names" like Blue or Gray
+}
+EOF
+
+" ====================== spectre ==================
+nnoremap <leader>S <cmd>lua require('spectre').open()<CR>
+
+"search current word
+nnoremap <leader>sw <cmd>lua require('spectre').open_visual({select_word=true})<CR>
+vnoremap <leader>s <esc>:lua require('spectre').open_visual()<CR>
+"  search in current file
+nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
