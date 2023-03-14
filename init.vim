@@ -109,7 +109,8 @@ Plug 'itchyny/vim-cursorword'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'RRethy/vim-illuminate'
 Plug 'gcmt/wildfire.vim'
-
+Plug 'petertriho/nvim-scrollbar'
+Plug 'kevinhwang91/nvim-hlslens'
 
 
 call plug#end()
@@ -531,3 +532,39 @@ let g:wildfire_objects = {
     \ "*" : ["i'", 'i"', "i)", "i]", "i}", "it"],
     \ "html,xml" : ["at", "it"],
 \ }
+
+
+" ==================== nvim-scrollbar ====================
+lua <<EOF
+require("scrollbar").setup()
+require("scrollbar.handlers.search").setup()
+require("scrollbar").setup({
+  show = true,
+  handle = {
+    text = " ",
+    color = "#928374",
+    hide_if_all_visible = true,
+  },
+  marks = {
+    Search = { color = "yellow" },
+    Misc = { color = "purple" },
+  },
+  handlers = {
+    cursor = true,
+    diagnostic = true,
+    gitsigns = true,
+    handle = true,
+    search = true,
+  },
+})
+EOF
+
+" ==================== nvim-hlslens ====================
+noremap <silent> = <Cmd>execute('normal! ' . v:count1 . 'n')<CR>
+            \<Cmd>lua require('hlslens').start()<CR>
+noremap <silent> - <Cmd>execute('normal! ' . v:count1 . 'N')<CR>
+            \<Cmd>lua require('hlslens').start()<CR>
+noremap * *<Cmd>lua require('hlslens').start()<CR>
+noremap # #<Cmd>lua require('hlslens').start()<CR>
+noremap g* g*<Cmd>lua require('hlslens').start()<CR>
+noremap g# g#<Cmd>lua require('hlslens').start()<CR>
