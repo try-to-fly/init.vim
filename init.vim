@@ -45,6 +45,9 @@ set formatoptions-=cro
 " 在vim中把所有的数字都当成十进制
 set nrformats=
 
+" 打开文件时自动跳转到上次编辑的位置的
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 
 
 " hi Normal guibg=NONE ctermbg=NONE
