@@ -54,6 +54,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 let mapleader=" "
 
+nnoremap <leader>w :w<CR>
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'nvim-lua/plenary.nvim'
