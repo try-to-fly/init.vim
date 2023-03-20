@@ -9,7 +9,7 @@ set expandtab " 使用空格替换tab
 set softtabstop=2 "设置按退格键时删除两个空格宽度
 set autoindent " 自动缩进
 set list " 显示特殊字符, 如制表符, 空格, 换行符
-set listchars=tab:»·,trail:· " 设置特殊字符的显示样式
+" set listchars=tab:»·,trail:· " 设置特殊字符的显示样式
 set scrolloff=4 " 光标移动到屏幕顶部和底部时保持4行距离
 set ttimeoutlen=0 " 禁用输入法延迟
 set notimeout " 禁用超时
@@ -37,7 +37,7 @@ set virtualedit=block " 设置在块选择模式下可以编辑超出文本末�
 set nocompatible              " be iMproved, required
 set encoding=UTF-8
 filetype off                  " required
-set shell=/bin/dash
+set shell=/bin/zsh
 set background=light
 set clipboard=unnamed
 " 换行不添加注释
@@ -374,6 +374,9 @@ colorscheme catppuccin-mocha
 "开启zsh终端
 let g:floaterm_shell = 'zsh'
 let g:floaterm_keymap_toggle = '<F12>'
+" 90% 宽度
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.9
 
 " nerdcommenter 快捷键配置
 " Create default mappings
@@ -570,3 +573,28 @@ noremap * *<Cmd>lua require('hlslens').start()<CR>
 noremap # #<Cmd>lua require('hlslens').start()<CR>
 noremap g* g*<Cmd>lua require('hlslens').start()<CR>
 noremap g# g#<Cmd>lua require('hlslens').start()<CR>
+
+" =========================startify==============
+" returns all modified files of the current git repo
+" `2>/dev/null` makes the command fail quietly, so that when we are not
+" in a git repo, the list will be empty
+function! s:gitModified()
+    let files = systemlist('git ls-files -m 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+" same as above, but show untracked files, honouring .gitignore
+function! s:gitUntracked()
+    let files = systemlist('git ls-files -o --exclude-standard 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+let g:startify_lists = [
+        \ { 'type': 'files',     'header': ['   MRU']            },
+        \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+        \ { 'type': 'sessions',  'header': ['   Sessions']       },
+        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+        \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
+        \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
+        \ { 'type': 'commands',  'header': ['   Commands']       },
+        \ ]
