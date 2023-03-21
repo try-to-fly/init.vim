@@ -49,6 +49,7 @@ set nrformats=
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
+autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
 
 " hi Normal guibg=NONE ctermbg=NONE
 
