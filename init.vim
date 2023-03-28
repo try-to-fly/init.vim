@@ -113,7 +113,7 @@ Plug 'RRethy/vim-illuminate'
 Plug 'gcmt/wildfire.vim'
 Plug 'petertriho/nvim-scrollbar'
 Plug 'kevinhwang91/nvim-hlslens'
-
+Plug 'tomtom/tcomment_vim'
 
 call plug#end()
 
