@@ -95,7 +95,6 @@ Plug 'tpope/vim-repeat'
 Plug 'ggandor/leap.nvim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'airblade/vim-gitgutter'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'voldikss/vim-translator'
 
 " 主题
@@ -478,9 +477,6 @@ remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap =
 EOF
 
 lua require('leap').add_default_mappings()
-
-" =================== editorconfig ========================
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " =====================translator =========================
 nmap <silent> <Leader>tw <Plug>TranslateW
