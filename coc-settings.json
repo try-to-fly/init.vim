@@ -92,7 +92,8 @@
     "dart",
     "terraform",
     "less",
-    "scss"
+    "scss",
+    "markdown"
   ],
   "yaml.format.enable": true,
   "signature.target": "float",
@@ -254,5 +255,6 @@
       }
     }
   },
-  "tsserver.tsdk": "/Users/smile/.config/yarn/global/node_modules/typescript/lib"
+  "tsserver.tsdk": "/Users/smile/.config/yarn/global/node_modules/typescript/lib",
+  "git.enableGutters": false
 }
