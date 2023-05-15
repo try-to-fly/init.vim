@@ -114,6 +114,8 @@ Plug 'petertriho/nvim-scrollbar'
 Plug 'kevinhwang91/nvim-hlslens'
 Plug 'tomtom/tcomment_vim'
 
+Plug 'jxnblk/vim-mdx-js'
+
 call plug#end()
 
 " ==================== 通用快捷键配置 ====================
