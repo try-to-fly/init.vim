@@ -63,8 +63,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'windwp/nvim-spectre'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 " git 插件
 Plug 'kdheepak/lazygit.nvim'
@@ -115,6 +113,10 @@ Plug 'kevinhwang91/nvim-hlslens'
 Plug 'tomtom/tcomment_vim'
 
 Plug 'jxnblk/vim-mdx-js'
+
+Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-neo-tree/neo-tree.nvim'
+
 
 call plug#end()
 
@@ -347,13 +349,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-" nerdtree
-let NERDTreeShowHidden=1
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-
 " LazyGit
 let g:lazygit_floating_window_winblend = 0 " transparency of floating window
 let g:lazygit_floating_window_scaling_factor = 1 " scaling factor for floating window
@@ -568,3 +563,22 @@ let g:startify_lists = [
         \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
+
+
+lua <<EOF
+require("neo-tree").setup({
+  close_if_last_window = true,
+  enable_git_status = true,
+  window = {
+    width = 30,
+  },
+  filesystem = {
+    filtered_items = {
+      hide_dotfiles = false
+    }
+  }
+})
+EOF
+
+nnoremap <C-t> :NeoTreeShowToggle<CR>
+nnoremap <C-f> :NeoTreeFocus<CR>
