@@ -569,6 +569,8 @@ lua <<EOF
 require("neo-tree").setup({
   close_if_last_window = true,
   enable_git_status = true,
+  use_libuv_file_watcher = true,
+  follow_current_file = true,
   window = {
     width = 30,
   },
@@ -581,4 +583,5 @@ require("neo-tree").setup({
 EOF
 
 nnoremap <C-t> :NeoTreeShowToggle<CR>
-nnoremap <C-f> :NeoTreeFocus<CR>
+nnoremap <C-f> :NeoTreeReveal<CR>
+nnoremap <silent><nowait> <space>fb :Neotree action=show source=buffers position=left toggle=true<CR>
