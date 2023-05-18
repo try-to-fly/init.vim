@@ -77,6 +77,7 @@ Plug 'github/copilot.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/playground'
 
 " Plug 'easymotion/vim-easymotion'
@@ -588,37 +589,45 @@ nnoremap <C-f> :NeoTreeReveal<CR>
 nnoremap <silent><nowait> <space>fb :Neotree action=show source=buffers position=left toggle=true<CR>
 
 lua <<EOF
+
 require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = {
     'astro', 'css', 'html', 'javascript',
     'lua', 'php', 'python',  'scss', 'svelte', 'tsx', 
     'typescript', 'vim', 'vue',
   },
-
   context_commentstring = {
     enable = true,
   },
-
-  -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
-
-  -- Automatically install missing parsers when entering buffer
-  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
   auto_install = true,
-
-  -- List of parsers to ignore installing (for "all")
   ignore_install = {  },
-
-  ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-  -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-
   highlight = {
     enable = true,
     disable = { "markdown", "json" },
     additional_vim_regex_highlighting = false,
   },
+  textobjects = {
+    select = {
+      enable = true,
+      lookahead = true,
+      keymaps = {
+        ["af"] = "@function.outer",
+        ["if"] = "@function.inner",
+        ["ac"] = "@class.outer",
+        ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+        ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
+      },
+      selection_modes = {
+        ['@parameter.outer'] = 'v',
+        ['@function.outer'] = 'V',
+        ['@class.outer'] = '<c-v>',
+      },
+      include_surrounding_whitespace = true,
+    },
+  },
 }
+
 EOF
 
 
