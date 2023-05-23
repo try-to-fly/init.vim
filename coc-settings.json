@@ -256,5 +256,6 @@
     }
   },
   "tsserver.tsdk": "/Users/smile/.config/yarn/global/node_modules/typescript/lib",
-  "git.enableGutters": false
+  "git.enableGutters": false,
+  "snippets.ultisnips.pythonPrompt": false
 }
