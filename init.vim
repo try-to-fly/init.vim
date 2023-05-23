@@ -575,6 +575,14 @@ require("neo-tree").setup({
   follow_current_file = true,
   window = {
     width = 30,
+    mappings = {
+        ["m"] = {
+            "move",
+            config = {
+                show_path = "absolute"
+              }
+          }
+      }
   },
   filesystem = {
     filtered_items = {
