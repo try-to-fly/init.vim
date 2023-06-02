@@ -201,7 +201,8 @@ let g:coc_global_extensions = [
   \ 'coc-yaml',
   \ 'coc-yank',
   \ 'coc-highlight',
-  \ 'coc-git'
+  \ 'coc-git',
+  \ '@yaegassy/coc-volar'
   \]
 
 
