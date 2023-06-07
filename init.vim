@@ -62,6 +62,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'nvim-lua/plenary.nvim'
 Plug 'windwp/nvim-spectre'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'nvim-telescope/telescope-live-grep-args.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 " git 插件
@@ -134,13 +135,15 @@ nnoremap <leader>rr :source $MYVIMRC<cr>
 " ==================== Telescope ====================
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep_args<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fr <cmd>Telescope oldfiles<cr>
 nnoremap <leader>fc <cmd>Telescope commands<cr>
 nnoremap <leader>fh <cmd>Telescope search_history<cr>
 nnoremap <leader>fm <cmd>Telescope git_status<cr>
 nnoremap <leader>fe <cmd>Telescope resume<cr>
+
+lua require("telescope").load_extension("live_grep_args")
 
 " ===================rainbow===================
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
