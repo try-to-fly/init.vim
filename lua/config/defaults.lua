@@ -2,7 +2,7 @@ vim.o.termguicolors = true
 vim.env.NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
 vim.o.ttyfast = true
-vim.o.autochdir = true
+-- vim.o.autochdir = true
 vim.o.exrc = true
 vim.o.secure = false
 vim.o.number = true
