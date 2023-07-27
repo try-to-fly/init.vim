@@ -32,4 +32,8 @@ require("lazy").setup({
 	require("config.plugins.statusline"),
 	require("config.plugins.fzf"),
 	require("config.plugins.indent"),
+	require("config.plugins.leap"),
+	require("config.plugins.surround"),
+	require("config.plugins.mason"),
+	require("config.plugins.notify")
 })
