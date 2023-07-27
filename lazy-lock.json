@@ -10,6 +10,7 @@
   "nvim-web-devicons": { "branch": "master", "commit": "efbfed0567ef4bfac3ce630524a0f6c8451c5534" },
   "plenary.nvim": { "branch": "master", "commit": "267282a9ce242bbb0c5dc31445b6d353bed978bb" },
   "telescope.nvim": { "branch": "master", "commit": "776b509f80dd49d8205b9b0d94485568236d1192" },
+  "vim-floaterm": { "branch": "master", "commit": "bcaeabf89a92a924031d471395054d84bd88ce2f" },
   "vim-instant-markdown": { "branch": "master", "commit": "383aa2900f855eddc42ffbe9d636c54e2f2939d5" },
   "vim-mdx-js": { "branch": "master", "commit": "17179d7f2a73172af5f9a8d65b01a3acf12ddd50" }
 }
