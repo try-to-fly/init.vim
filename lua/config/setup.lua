@@ -104,5 +104,8 @@ require("lazy").setup({
     config = function()
         require('Comment').setup()
     end
+  },
+  {
+    "github/copilot.vim"
   }
 })
