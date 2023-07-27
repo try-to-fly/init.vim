@@ -84,7 +84,7 @@ require("lazy").setup({
   {
     "catppuccin/nvim",
     priority = 1000,
-    config = function ()
+    config = function()
       vim.cmd([[colorscheme catppuccin-mocha]])
     end
   },
@@ -102,10 +102,11 @@ require("lazy").setup({
   {
     'numToStr/Comment.nvim',
     config = function()
-        require('Comment').setup()
+      require('Comment').setup()
     end
   },
   {
     "github/copilot.vim"
-  }
+  },
+  require("config.plugins.winbar"),
 })
