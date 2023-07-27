@@ -35,5 +35,8 @@ require("lazy").setup({
 	require("config.plugins.leap"),
 	require("config.plugins.surround"),
 	require("config.plugins.mason"),
-	require("config.plugins.notify")
+	require("config.plugins.notify"),
+	require("config.plugins.project"),
+	require("config.plugins.scrollbar"),
+	require("config.plugins.wilder")
 })
