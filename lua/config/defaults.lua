@@ -1,3 +1,9 @@
+vim.o.shell = '/bin/zsh'
+vim.o.background = 'light'
+vim.o.clipboard = 'unnamed'
+-- 在vim中把所有的数字都当成十进制
+vim.o.nrformats = ''
+
 vim.o.termguicolors = true
 vim.env.NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
