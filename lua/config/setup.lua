@@ -109,5 +109,10 @@ require("lazy").setup({
     "github/copilot.vim"
   },
   require("config.plugins.winbar"),
-  require("config.plugins.terminal")
+  require("config.plugins.terminal"),
+  require("config.plugins.editor"),
+  require("config.plugins.autocomplete").config,
+  require("config.plugins.debugger"),
+  require("config.plugins.lspconfig").config,
+  require("config.plugins.yank")
 })
