@@ -80,5 +80,12 @@ require("lazy").setup({
       vim.keymap.set('n', '<leader>fm', builtin.git_status, m)
       vim.keymap.set('n', '<leader>fe', builtin.resume, m)
     end
+  },
+  {
+    "catppuccin/nvim",
+    priority = 1000,
+    config = function ()
+      vim.cmd([[colorscheme catppuccin-mocha]])
+    end
   }
 })
