@@ -105,9 +105,7 @@ require("lazy").setup({
 			require('Comment').setup()
 		end
 	},
-	{
-		"github/copilot.vim"
-	},
+	require("config.plugins.copilot"),
 	require("config.plugins.winbar"),
 	require("config.plugins.terminal"),
 	require("config.plugins.editor"),
@@ -117,5 +115,6 @@ require("lazy").setup({
 	require("config.plugins.treesitter"),
 	require("config.plugins.yank"),
 	require("config.plugins.tabline"),
+	require("config.plugins.snippets"),
 	require("config.plugins.statusline")
 })
