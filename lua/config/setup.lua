@@ -30,5 +30,6 @@ require("lazy").setup({
 	require("config.plugins.tabline"),
 	require("config.plugins.snippets"),
 	require("config.plugins.statusline"),
-	require("config.plugins.fzf")
+	require("config.plugins.fzf"),
+	require("config.plugins.indent"),
 })
