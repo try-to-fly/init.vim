@@ -21,8 +21,7 @@ require("lazy").setup({
       "MunifTanjim/nui.nvim",
     },
     config = function()
-      local tree = require("neo-tree")
-      tree. setup({
+      require("neo-tree").setup({
         close_if_last_window = true,
         enable_git_status = true,
         use_libuv_file_watcher = true,
@@ -52,5 +51,17 @@ require("lazy").setup({
       vim.api.nvim_set_keymap('n', '<C-t>', ':Neotree toggle<CR>', { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '<C-f>', ':Neotree reveal<CR>', { noremap = true, silent = true })
     end
-  }
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      vim.g.lazygit_floating_window_scaling_factor = 1.0
+			vim.g.lazygit_floating_window_winblend = 0
+			vim.g.lazygit_use_neovim_remote = true
+      vim.api.nvim_set_keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true, silent = true })
+    end
+  },
 })
