@@ -98,5 +98,11 @@ require("lazy").setup({
         vim.g.instant_markdown_autostart = 0
       end,
     }
+  },
+  {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
   }
 })
