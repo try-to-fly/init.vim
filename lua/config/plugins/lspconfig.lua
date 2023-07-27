@@ -54,6 +54,15 @@ M.config = {
 				'eslint',
 				'gopls',
 				'jsonls',
+				'rust_analyzer',
+				'bashls',
+				'cssls',
+				'cssmodules_ls',
+				'dockerls',
+				'html',
+				'quick_lint_js',
+				'vtsls',
+				'marksman'
 			})
 
 			-- F.configureInlayHints()
