@@ -116,5 +116,6 @@ require("lazy").setup({
 	require("config.plugins.lspconfig").config,
 	require("config.plugins.treesitter"),
 	require("config.plugins.yank"),
-	require("config.plugins.tabline")
+	require("config.plugins.tabline"),
+	require("config.plugins.statusline")
 })
