@@ -38,5 +38,5 @@ require("lazy").setup({
 	require("config.plugins.notify"),
 	require("config.plugins.project"),
 	require("config.plugins.scrollbar"),
-	require("config.plugins.wilder")
+	-- require("config.plugins.wilder")
 })
