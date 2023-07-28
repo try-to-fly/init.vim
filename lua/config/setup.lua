@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	require("config.plugins.tree"),
 	require("config.plugins.git"),
-	require("config.plugins.telescope"),
+	require("config.plugins.telescope").config,
 	require("config.plugins.theme"),
 	require("config.plugins.markdown"),
 	require("config.plugins.comment"),
@@ -38,5 +38,17 @@ require("lazy").setup({
 	require("config.plugins.notify"),
 	require("config.plugins.project"),
 	require("config.plugins.scrollbar"),
-	-- require("config.plugins.wilder")
+	require("config.plugins.search"),
+	require("config.plugins.window-management"),
+	require("config.plugins.undo"),
+	require("config.plugins.fun"),
+	require("config.plugins.multi-cursor"),
+	{ "dstein64/vim-startuptime" },
 })
+
+require("plugin.vertical_cursor_movement")
+
+local swap_ternary = require("plugin.swap_ternary")
+vim.keymap.set("n", "<leader>st", swap_ternary.swap_ternary, { noremap = true })
+
+require("plugin.compile_run")
