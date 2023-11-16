@@ -4,3 +4,4 @@
 -- 允许系统剪切板访问
 vim.o.clipboard = "unnamed"
 vim.o.wrap = true
+vim.o.relativenumber = false
