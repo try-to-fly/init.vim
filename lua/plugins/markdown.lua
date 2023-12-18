@@ -1,11 +1,7 @@
 return {
-  "jxnblk/vim-mdx-js",
-  {
-    "instant-markdown/vim-instant-markdown",
-    ft = { "markdown" },
-    build = "yarn install",
-    config = function()
-      vim.g.instant_markdown_autostart = 0
-    end,
-  },
+  "williamboman/mason.nvim",
+  opts = function(_, opts)
+    opts.ensure_installed = opts.ensure_installed or {}
+    vim.list_extend(opts.ensure_installed, { "markdownlint", "marksman" })
+  end,
 }
