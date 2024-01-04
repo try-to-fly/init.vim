@@ -11,3 +11,5 @@
 [diffview.nvim](https://github.com/sindrets/diffview.nvim): 不仅可以解决冲突，还可以查看给定文件的commit记录。
 
 ### 待解决
+
+1. 换行时如何避免自动注释。
