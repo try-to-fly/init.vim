@@ -14,3 +14,7 @@ vim.api.nvim_set_keymap("n", "<Leader>cb", "", {
     vim.api.nvim_command("normal! k")
   end,
 })
+
+vim.keymap.set("n", "<leader>sp", '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
+  desc = "Search on current file",
+})
