@@ -1,0 +1,41 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "delta": {
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#delta",
+      "source": "nixpkg"
+    },
+    "fd": {
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#fd",
+      "source": "nixpkg"
+    },
+    "fzf": {
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#fzf",
+      "source": "nixpkg"
+    },
+    "git": {
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#git",
+      "source": "nixpkg"
+    },
+    "git-extras": {
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#git-extras",
+      "source": "nixpkg"
+    },
+    "lazygit": {
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#lazygit",
+      "source": "nixpkg"
+    },
+    "neovim": {
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#neovim",
+      "source": "nixpkg"
+    },
+    "nodejs": {
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#nodejs",
+      "source": "nixpkg"
+    },
+    "ripgrep": {
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#ripgrep",
+      "source": "nixpkg"
+    }
+  }
+}
