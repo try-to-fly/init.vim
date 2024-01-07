@@ -29,7 +29,7 @@ tar -xf fd-v8.7.1-x86_64-unknown-linux-musl.tar.gz
 
 # --------------- 安装nvim -----------------
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
+chmod u+x nvim.appimag
 
 # 如果不支持appimage，可以使用下面的命令
 wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz

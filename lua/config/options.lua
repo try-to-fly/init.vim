@@ -4,7 +4,7 @@
 -- 允许系统剪切板访问
 vim.o.clipboard = "unnamed"
 vim.o.wrap = true
-vim.o.relativenumber = false
+-- vim.o.relativenumber = false
 
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
