@@ -45,4 +45,7 @@ return {
       "tpope/vim-rhubarb",
     },
   },
+  {
+    "mtdl9/vim-log-highlighting",
+  },
 }
