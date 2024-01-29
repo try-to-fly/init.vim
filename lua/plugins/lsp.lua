@@ -47,6 +47,9 @@ return {
         code_action = {
           show_server_name = true,
         },
+        lightbulb = {
+          enable = false,
+        },
       })
     end,
     dependencies = {
