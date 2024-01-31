@@ -22,7 +22,7 @@ return {
         { "<leader>fr", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent" },
         { "<leader>/", Util.telescope("live_grep"), desc = "Grep (root dir)" },
         { "<leader>fb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
-        { "<leader>ff", Util.telescope("files"), desc = "Find Files (root dir)" },
+        { "<leader>ff", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
         { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
         { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
         { "<leader>sR", "<cmd>Telescope resume<cr>", desc = "Resume" },
