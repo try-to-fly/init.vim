@@ -8,6 +8,7 @@ return {
       keys[#keys + 1] = { "<leader>ca", false }
       keys[#keys + 1] = { "gd", false }
       keys[#keys + 1] = { "<leader>cr", false }
+      keys[#keys + 1] = { "gr", false }
     end,
   },
   {
@@ -34,6 +35,8 @@ return {
       )
       -- rename
       vim.keymap.set({ "n", "v" }, "<leader>cr", "<cmd>Lspsaga rename<CR>", { desc = "Lspsaga Rename" })
+
+      vim.keymap.set({ "n", "v" }, "gr", "<cmd>Lspsaga finder<CR>", { desc = "Lspsaga Finder" })
 
       require("lspsaga").setup({
         finder = {
