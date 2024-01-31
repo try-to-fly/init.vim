@@ -48,4 +48,18 @@ return {
   {
     "mtdl9/vim-log-highlighting",
   },
+  {
+    "stevearc/oil.nvim",
+    -- enabled = false,
+    opts = {},
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      vim.keymap.set("n", "_", "<cmd>Oil<cr>", { desc = "Open oil" })
+      require("oil").setup({
+        columns = {
+          "icon",
+        },
+      })
+    end,
+  },
 }
