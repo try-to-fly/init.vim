@@ -62,4 +62,5 @@ return {
       })
     end,
   },
+  { "prisma/vim-prisma" },
 }
