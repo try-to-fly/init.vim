@@ -72,6 +72,7 @@
   "persistence.nvim": { "branch": "main", "commit": "4982499c1636eac254b72923ab826ee7827b3084" },
   "plenary.nvim": { "branch": "master", "commit": "4f71c0c4a196ceb656c824a70792f3df3ce6bb6d" },
   "project-info.nvim": { "branch": "master", "commit": "c2ca53e1c6e75f371f04a759b1d3227324e35e05" },
+  "rest.nvim": { "branch": "main", "commit": "2d7bd3d398940ce2692941e6cd052c072207b9f9" },
   "rust-tools.nvim": { "branch": "master", "commit": "676187908a1ce35ffcd727c654ed68d851299d3e" },
   "semshi": { "branch": "master", "commit": "0182447e2ff4dfa04cd2dfe5f189e012c581ca45" },
   "symbols-outline.nvim": { "branch": "master", "commit": "564ee65dfc9024bdde73a6621820866987cbb256" },
