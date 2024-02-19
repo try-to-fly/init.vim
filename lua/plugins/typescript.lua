@@ -9,16 +9,20 @@ return {
       end
     end,
   },
-
-  -- correctly setup lspconfig
   {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        vtsls = {},
-      },
-    },
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
   },
+  -- correctly setup lspconfig
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   opts = {
+  --     servers = {
+  --       vtsls = {},
+  --     },
+  --   },
+  -- },
 
   {
     "mfussenegger/nvim-dap",
