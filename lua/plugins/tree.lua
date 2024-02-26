@@ -9,7 +9,7 @@ return {
         columns = {
           "icon",
         },
-        delete_to_trash = true,
+        -- delete_to_trash = true,
         skip_confirm_for_simple_edits = true,
         lsp_rename_autosave = true,
         win_options = {
