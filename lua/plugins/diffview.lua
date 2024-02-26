@@ -16,7 +16,7 @@ _G.open_diffview = open_diffview
 return {
   "sindrets/diffview.nvim",
   config = function()
-    vim.api.nvim_set_keymap("n", "<leader>gf", ":DiffviewFileHistory %", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("n", "<leader>gf", ":DiffviewFileHistory %<CR>", { noremap = true, silent = true })
 
     -- 创建一个用户命令 DiffView，调用 Lua 函数并接受一个参数
     vim.api.nvim_create_user_command("DiffView", "lua open_diffview(<f-args>)", { nargs = "*" })
