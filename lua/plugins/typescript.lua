@@ -76,4 +76,16 @@ return {
       end
     end,
   },
+  {
+    "dmmulroy/tsc.nvim",
+    config = function()
+      require("tsc").setup()
+    end,
+  },
+  {
+    "dmmulroy/ts-error-translator.nvim",
+    config = function()
+      require("ts-error-translator").setup()
+    end,
+  },
 }
