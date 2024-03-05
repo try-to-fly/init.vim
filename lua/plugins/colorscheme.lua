@@ -1,5 +1,9 @@
 return {
   {
+    "brenoprata10/nvim-highlight-colors",
+    opts = {},
+  },
+  {
     "catppuccin/nvim",
     priority = 1000,
   },
