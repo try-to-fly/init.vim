@@ -80,6 +80,7 @@
   "plenary.nvim": { "branch": "master", "commit": "f7adfc4b3f4f91aab6caebf42b3682945fbc35be" },
   "project-info.nvim": { "branch": "master", "commit": "c2ca53e1c6e75f371f04a759b1d3227324e35e05" },
   "project.nvim": { "branch": "main", "commit": "8c6bad7d22eef1b71144b401c9f74ed01526a4fb" },
+  "rainbow_csv.nvim": { "branch": "main", "commit": "a520dabf1c74d7d7d8341dd3f3570063ef51b3aa" },
   "rest.nvim": { "branch": "main", "commit": "b1c84475a8f053037cecf5249e6b69af5a7548d6" },
   "rustaceanvim": { "branch": "master", "commit": "387ca846d632f8c90631536341ca1778b4c2c497" },
   "semshi": { "branch": "master", "commit": "0182447e2ff4dfa04cd2dfe5f189e012c581ca45" },
