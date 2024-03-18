@@ -1,3 +1,4 @@
+local Util = require("lazyvim.util")
 return {
   {
     "f-person/git-blame.nvim",
@@ -21,6 +22,20 @@ return {
       "nvim-telescope/telescope.nvim",
       "tpope/vim-fugitive",
       "tpope/vim-rhubarb",
+    },
+  },
+  {
+    {
+      "isak102/telescope-git-file-history.nvim",
+      dependencies = { "tpope/vim-fugitive", "nvim-telescope/telescope.nvim" },
+      config = function()
+        require("telescope").load_extension("git_file_history")
+      end,
+      keys = function()
+        return {
+          { "<leader>gl", "<cmd>Telescope git_file_history<CR>", desc = "git_file_history" },
+        }
+      end,
     },
   },
 }
