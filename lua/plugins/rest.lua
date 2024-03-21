@@ -10,6 +10,7 @@ return {
   {
     "rest-nvim/rest.nvim",
     dependencies = { { "nvim-lua/plenary.nvim" } },
+    enabled = false,
     config = function()
       vim.keymap.set("n", ",x", "<Plug>RestNvim", { desc = "execute request" })
       vim.keymap.set("n", ",p", "<Plug>RestNvimPreview", { desc = "preview curl" })
