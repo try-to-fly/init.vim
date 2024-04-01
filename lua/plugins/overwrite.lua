@@ -29,6 +29,7 @@ return {
         { "<leader>fw", Util.telescope("grep_string", { word_match = "-w" }), desc = "Word (root dir)" },
         { "<leader>fw", Util.telescope("grep_string"), mode = "v", desc = "Selection (root dir)" },
         { "<leader>fc", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+        { "<leader>fd", "<cmd>Telescope search_folders<CR>", desc = "文件夹列表" },
         {
           "<leader>ss",
           function()
