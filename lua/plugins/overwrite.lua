@@ -108,4 +108,32 @@ return {
       },
     },
   },
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        color_devicons = true,
+        prompt_prefix = "🔍 ",
+        scroll_strategy = "cycle",
+        -- sorting_strategy = "ascending",
+        layout_strategy = "flex",
+        layout_config = {
+          horizontal = {
+            -- mirror = true,
+            preview_cutoff = 100,
+            preview_width = 0.6,
+          },
+          vertical = {
+            -- mirror = true,
+            preview_cutoff = 0.4,
+          },
+          flex = {
+            flip_columns = 128,
+          },
+          height = 0.94,
+          width = 0.86,
+        },
+      },
+    },
+  },
 }
