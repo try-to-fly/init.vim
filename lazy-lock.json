@@ -29,6 +29,7 @@
   "im-switch.nvim": { "branch": "main", "commit": "7b5fc6667920a0acdd285637f1aaf6981884ca02" },
   "img-clip.nvim": { "branch": "main", "commit": "fc30500c35663aa1762697f5aba31d43b86028f0" },
   "indent-blankline.nvim": { "branch": "master", "commit": "3d08501caef2329aba5121b753e903904088f7e6" },
+  "jsonfly.nvim": { "branch": "main", "commit": "539a0b79a5ea75d201e1e90cebfe9367154d04fc" },
   "kanagawa.nvim": { "branch": "master", "commit": "bfa818c7bf6259152f1d89cf9fbfba3554c93695" },
   "lazy.nvim": { "branch": "main", "commit": "bef521ac89c8d423f9d092e37b58e8af0c099309" },
   "leap.nvim": { "branch": "main", "commit": "ea61597e64189fdeca49898f9e2a548a6ebbbab6" },
