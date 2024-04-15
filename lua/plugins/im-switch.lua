@@ -7,5 +7,11 @@ return {
       enabled = true,
       default_im = "com.apple.keylayout.ABC",
     },
+    linux = {
+      enabled = false,
+    },
+    windows = {
+      enabled = false,
+    },
   },
 }
