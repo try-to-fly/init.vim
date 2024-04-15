@@ -1,7 +1,11 @@
 return {
   {
     "brenoprata10/nvim-highlight-colors",
-    opts = {},
+    event = "VeryLazy",
+    opts = {
+      enable_tailwind = true,
+      enable_named_colors = true,
+    },
   },
   {
     "catppuccin/nvim",
