@@ -1,37 +1,129 @@
-# 如何使用
+# init.vim/
 
-## 外部依赖
+<a href="https://dotfyle.com/try-to-fly/initvim"><img src="https://dotfyle.com/try-to-fly/initvim/badges/plugins?style=flat" /></a>
+<a href="https://dotfyle.com/try-to-fly/initvim"><img src="https://dotfyle.com/try-to-fly/initvim/badges/leaderkey?style=flat" /></a>
+<a href="https://dotfyle.com/try-to-fly/initvim"><img src="https://dotfyle.com/try-to-fly/initvim/badges/plugin-manager?style=flat" /></a>
 
-```bash
-#---------------安装node环境和yarn ---------
-# 安装nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-# 配置淘宝镜像源
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
-# 安装node 20
-nvm install 20
-# 开启corepack
-corepack enable
+## Install Instructions
 
-# ----------------安装lazygit----------------
-wget https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Linux_x86_64.tar.gz
-tar -xf lazygit_0.40.2_Linux_x86_64.tar.gz
-# 设置lazygit到环境变量中
+> Install requires Neovim 0.9+. Always review the code before installing a configuration.
 
+Clone the repository and install the plugins:
 
-# ----------------安装ripgrep----------------
-wget https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
-tar -xf ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
-
-# ----------------安装fd----------------
-wget https://github.com/sharkdp/fd/releases/download/v8.7.1/fd-v8.7.1-x86_64-unknown-linux-musl.tar.gz
-tar -xf fd-v8.7.1-x86_64-unknown-linux-musl.tar.gz
-
-# --------------- 安装nvim -----------------
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimag
-
-# 如果不支持appimage，可以使用下面的命令
-wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-tar -xf nvim-linux64.tar.gz
+```sh
+git clone git@github.com:try-to-fly/init.vim ~/.config/try-to-fly/init.vim
 ```
+
+Open Neovim with this config:
+
+```sh
+NVIM_APPNAME=try-to-fly/init.vim/ nvim
+```
+
+## Plugins
+
+### ai
+
+- [CopilotC-Nvim/CopilotChat.nvim](https://dotfyle.com/plugins/CopilotC-Nvim/CopilotChat.nvim)
+
+### color
+
+- [brenoprata10/nvim-highlight-colors](https://dotfyle.com/plugins/brenoprata10/nvim-highlight-colors)
+
+### colorscheme
+
+- [tiagovla/tokyodark.nvim](https://dotfyle.com/plugins/tiagovla/tokyodark.nvim)
+- [catppuccin/nvim](https://dotfyle.com/plugins/catppuccin/nvim)
+- [folke/tokyonight.nvim](https://dotfyle.com/plugins/folke/tokyonight.nvim)
+- [rebelot/kanagawa.nvim](https://dotfyle.com/plugins/rebelot/kanagawa.nvim)
+
+### debugging
+
+- [mfussenegger/nvim-dap](https://dotfyle.com/plugins/mfussenegger/nvim-dap)
+
+### dependency-management
+
+- [vuki656/package-info.nvim](https://dotfyle.com/plugins/vuki656/package-info.nvim)
+
+### editing-support
+
+- [echasnovski/mini.pairs](https://dotfyle.com/plugins/echasnovski/mini.pairs)
+- [windwp/nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
+- [drop-stones/im-switch.nvim](https://dotfyle.com/plugins/drop-stones/im-switch.nvim)
+
+### file-explorer
+
+- [nvim-neo-tree/neo-tree.nvim](https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim)
+- [stevearc/oil.nvim](https://dotfyle.com/plugins/stevearc/oil.nvim)
+
+### fuzzy-finder
+
+- [nvim-telescope/telescope.nvim](https://dotfyle.com/plugins/nvim-telescope/telescope.nvim)
+
+### git
+
+- [sindrets/diffview.nvim](https://dotfyle.com/plugins/sindrets/diffview.nvim)
+- [f-person/git-blame.nvim](https://dotfyle.com/plugins/f-person/git-blame.nvim)
+- [isak102/telescope-git-file-history.nvim](https://dotfyle.com/plugins/isak102/telescope-git-file-history.nvim)
+- [aaronhallaert/advanced-git-search.nvim](https://dotfyle.com/plugins/aaronhallaert/advanced-git-search.nvim)
+
+### lsp
+
+- [nvimdev/lspsaga.nvim](https://dotfyle.com/plugins/nvimdev/lspsaga.nvim)
+- [neovim/nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)
+
+### lsp-installer
+
+- [williamboman/mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)
+
+### markdown-and-latex
+
+- [iamcco/markdown-preview.nvim](https://dotfyle.com/plugins/iamcco/markdown-preview.nvim)
+
+### marks
+
+- [cbochs/grapple.nvim](https://dotfyle.com/plugins/cbochs/grapple.nvim)
+
+### media
+
+- [HakonHarnes/img-clip.nvim](https://dotfyle.com/plugins/HakonHarnes/img-clip.nvim)
+
+### nvim-dev
+
+- [nvim-lua/plenary.nvim](https://dotfyle.com/plugins/nvim-lua/plenary.nvim)
+- [nvim-lua/popup.nvim](https://dotfyle.com/plugins/nvim-lua/popup.nvim)
+
+### plugin-manager
+
+- [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)
+
+### preconfigured
+
+- [LazyVim/LazyVim](https://dotfyle.com/plugins/LazyVim/LazyVim)
+
+### programming-languages-support
+
+- [dmmulroy/tsc.nvim](https://dotfyle.com/plugins/dmmulroy/tsc.nvim)
+- [dmmulroy/ts-error-translator.nvim](https://dotfyle.com/plugins/dmmulroy/ts-error-translator.nvim)
+
+### syntax
+
+- [nvim-treesitter/nvim-treesitter](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter)
+
+### terminal-integration
+
+- [samjwill/nvim-unception](https://dotfyle.com/plugins/samjwill/nvim-unception)
+
+### utility
+
+- [mistricky/codesnap.nvim](https://dotfyle.com/plugins/mistricky/codesnap.nvim)
+
+### web-development
+
+- [rest-nvim/rest.nvim](https://dotfyle.com/plugins/rest-nvim/rest.nvim)
+
+## Language Servers
+
+- marksman
+
+This readme was generated by [Dotfyle](https://dotfyle.com)
