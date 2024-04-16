@@ -110,6 +110,7 @@ return {
   },
   {
     "nvim-telescope/telescope.nvim",
+    event = "VeryLazy",
     opts = {
       defaults = {
         color_devicons = true,
@@ -135,5 +136,22 @@ return {
         },
       },
     },
+  },
+
+  {
+    "debugloop/telescope-undo.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+    },
+    keys = {
+      { -- lazy style key map
+        "<leader>u",
+        "<cmd>Telescope undo<cr>",
+        desc = "undo history",
+      },
+    },
+    config = function()
+      require("telescope").load_extension("undo")
+    end,
   },
 }
