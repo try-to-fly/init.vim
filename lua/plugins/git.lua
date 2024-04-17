@@ -8,6 +8,14 @@ return {
     end,
   },
   {
+    "FabijanZulj/blame.nvim",
+    config = function()
+      require("blame").setup({
+        date_format = "%m.%d",
+      })
+    end,
+  },
+  {
     "aaronhallaert/advanced-git-search.nvim",
     config = function()
       require("telescope").setup({
