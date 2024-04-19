@@ -1,11 +1,17 @@
 return {
-  "nvim-telescope/telescope-media-files.nvim",
-  denpendencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope.nvim",
-    "nvim-lua/popup.nvim",
+  {
+    "vhyrro/luarocks.nvim",
+    priority = 1001, -- this plugin needs to run before anything else
+    config = true,
+    opts = {
+      rocks = { "magick" },
+    },
   },
-  config = function()
-    require("telescope").load_extension("media_files")
-  end,
+  {
+    "3rd/image.nvim",
+    dependencies = { "luarocks.nvim" },
+    config = function()
+      require("image").setup()
+    end,
+  },
 }
