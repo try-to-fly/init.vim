@@ -8,6 +8,7 @@ return {
       require("oil").setup({
         columns = {
           "icon",
+          "size",
         },
         -- delete_to_trash = true,
         skip_confirm_for_simple_edits = true,
