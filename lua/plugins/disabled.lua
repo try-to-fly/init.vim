@@ -1,6 +1,12 @@
-return {
-  { "echasnovski/mini.pairs", enabled = false },
-  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
-  -- { "iamcco/markdown-preview.nvim", enabled = false },
-  { "lukas-reineke/headlines.nvim", enabled = false },
+local plugin_names = {
+  "echasnovski/mini.pairs",
+  "nvim-neo-tree/neo-tree.nvim",
+  "lukas-reineke/headlines.nvim",
+  "akinsho/bufferline.nvim",
 }
+
+local plugins = {}
+for _, name in ipairs(plugin_names) do
+  table.insert(plugins, { name, enabled = false })
+end
+return plugins
