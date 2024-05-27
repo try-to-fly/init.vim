@@ -25,6 +25,7 @@
   "gist.nvim": { "branch": "main", "commit": "92b13e486dd9fd083750450e0d262fcc68a62b91" },
   "git-blame.nvim": { "branch": "master", "commit": "fb84fad97cd4b51caee3c865e8a33a0d413b77a8" },
   "grapple.nvim": { "branch": "main", "commit": "7aedc261b05a6c030397c4bc26416efbe746ebf1" },
+  "huez.nvim": { "branch": "main", "commit": "d2872466ab54349624189c8287973a7bb84deaf8" },
   "im-switch.nvim": { "branch": "main", "commit": "ef77d2ed0c47f2c49070e5c2ddacd6b078753037" },
   "image.nvim": { "branch": "master", "commit": "2a618c86d9f8fd9f7895d12b55ec2f31fd14fa05" },
   "img-clip.nvim": { "branch": "main", "commit": "d7ddfd88d50f0b1acd5175448ad159057fe41ab6" },
