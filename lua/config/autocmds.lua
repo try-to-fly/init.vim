@@ -13,3 +13,12 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spell = false
   end,
 })
+
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
+  pattern = { "*.js", "*.ts" },
+  callback = function()
+    vim.schedule(function()
+      require("import_folds").toggle_import_folds()
+    end)
+  end,
+})

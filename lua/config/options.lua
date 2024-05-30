@@ -11,3 +11,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
     vim.opt.formatoptions = vim.opt.formatoptions - { "c", "r", "o" }
   end,
 })
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>i",
+  ':lua require("import_folds").toggle_import_folds()<CR>',
+  { noremap = true, silent = true }
+)
