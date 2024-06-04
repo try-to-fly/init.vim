@@ -5,6 +5,9 @@ return {
     opts = {
       watermark = "",
     },
+    cmd = {
+      "CodeSnap",
+    },
     keys = {
       {
         "<leader>cs",
