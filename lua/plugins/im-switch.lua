@@ -2,6 +2,7 @@ return {
   "drop-stones/im-switch.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
   event = "VeryLazy",
+  enabled = vim.loop.os_uname().sysname == "Darwin",
   opts = {
     mac = {
       enabled = true,
