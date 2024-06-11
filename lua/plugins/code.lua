@@ -11,7 +11,7 @@ return {
     keys = {
       {
         "<leader>cs",
-        "<cmd>CodeSnap<CR>",
+        "<Esc><cmd>CodeSnap<CR>",
         desc = "Code snap",
         mode = "v",
       },
