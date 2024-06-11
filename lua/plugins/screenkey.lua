@@ -1,5 +1,12 @@
 return {
   "NStefan002/screenkey.nvim",
   cmd = "Screenkey",
-  config = true,
+  version = "*",
+  config = function()
+    require("screenkey").setup({
+      display_infront = {
+        "Telescope*",
+      },
+    })
+  end,
 }
