@@ -1,5 +1,3 @@
-local Util = require("lazyvim.util")
-
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -19,16 +17,16 @@ return {
     "nvim-telescope/telescope.nvim",
     keys = function()
       return {
-        { "<leader>fr", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent" },
-        { "<leader>/", Util.telescope("live_grep"), desc = "Grep (root dir)" },
+        { "<leader>fr", LazyVim.pick("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent" },
+        { "<leader>/", LazyVim.pick("live_grep"), desc = "Grep (root dir)" },
         { "<leader>fb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
-        { "<leader>ff", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
+        { "<leader>ff", LazyVim.pick("files", { cwd = false }), desc = "Find Files (cwd)" },
         { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
         { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
         { "<leader>sR", "<cmd>Telescope resume<cr>", desc = "Resume" },
-        { "<leader>fw", Util.telescope("grep_string", { word_match = "-w" }), desc = "Word (root dir)" },
-        { "<leader>fw", Util.telescope("grep_string"), mode = "v", desc = "Selection (root dir)" },
-        { "<leader>fc", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+        { "<leader>fw", LazyVim.pick("grep_string", { word_match = "-w" }), desc = "Word (root dir)" },
+        { "<leader>fw", LazyVim.pick("grep_string"), mode = "v", desc = "Selection (root dir)" },
+        { "<leader>fc", LazyVim.pick("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
         { "<leader>fd", "<cmd>Telescope search_folders<CR>", desc = "文件夹列表" },
         {
           "<leader>ss",
