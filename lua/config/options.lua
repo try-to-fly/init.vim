@@ -5,6 +5,8 @@
 vim.o.clipboard = "unnamed"
 vim.o.wrap = true
 
+vim.opt.scrolloff = 5
+
 -- 判断是否是Linux环境
 if vim.loop.os_uname().sysname == "Linux" then
   vim.o.clipboard = "unnamedplus"
