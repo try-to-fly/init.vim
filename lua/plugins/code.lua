@@ -4,6 +4,7 @@ return {
     build = "make",
     opts = {
       watermark = "",
+      bg_padding = 0,
     },
     cmd = {
       "CodeSnap",
