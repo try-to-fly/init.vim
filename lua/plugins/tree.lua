@@ -21,6 +21,10 @@ return {
         },
         view_options = {
           show_hidden = true,
+          is_always_hidden = function(name, bufnr)
+            -- 忽略.DS_Store文件
+            return name:match("%.DS_Store")
+          end,
         },
       })
     end,
