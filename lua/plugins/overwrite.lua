@@ -18,9 +18,10 @@ return {
     keys = function()
       return {
         { "<leader>fr", LazyVim.pick("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent" },
-        { "<leader>/", LazyVim.pick("live_grep"), desc = "Grep (root dir)" },
+        { "<leader>/", LazyVim.pick("live_grep", { root = false }), desc = "Grep (Root Dir)" },
         { "<leader>fb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
-        { "<leader>ff", LazyVim.pick("files", { cwd = false }), desc = "Find Files (cwd)" },
+        { "<leader>ff", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
+        { "<leader>fF", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
         { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
         { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
         { "<leader>sR", "<cmd>Telescope resume<cr>", desc = "Resume" },
