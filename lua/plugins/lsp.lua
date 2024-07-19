@@ -14,7 +14,7 @@ return {
   {
     "nvimdev/lspsaga.nvim",
     config = function()
-      vim.keymap.set({ "n", "t" }, "<leader>t", "<cmd>Lspsaga term_toggle<CR>", { desc = "Toggle LSP Saga Terminal" })
+      vim.keymap.set({ "n", "t" }, "<A-d>", "<cmd>Lspsaga term_toggle<CR>", { desc = "Toggle LSP Saga Terminal" })
       vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "Lspsaga hover_doc" })
       vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { desc = "Lspsaga code action" })
       -- definition
