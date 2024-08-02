@@ -8,20 +8,20 @@ vim.o.wrap = true
 vim.opt.scrolloff = 5
 
 -- 判断是否是Linux环境
-if vim.loop.os_uname().sysname == "Linux" then
-  vim.o.clipboard = "unnamedplus"
-  vim.g.clipboard = {
-    name = "OSC 52",
-    copy = {
-      ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
-      ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
-    },
-    paste = {
-      ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
-      ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
-    },
-  }
-end
+-- if vim.loop.os_uname().sysname == "Linux" then
+--   vim.o.clipboard = "unnamedplus"
+--   vim.g.clipboard = {
+--     name = "OSC 52",
+--     copy = {
+--       ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+--       ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+--     },
+--     paste = {
+--       ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+--       ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+--     },
+--   }
+-- end
 
 -- vim.o.relativenumber = false
 
