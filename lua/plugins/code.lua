@@ -16,6 +16,12 @@ return {
         desc = "Code snap",
         mode = "v",
       },
+      {
+        "<leader>cS",
+        "<Esc><cmd>CodeSnapHighlight<CR>",
+        desc = "Code snap Highlight",
+        mode = "v",
+      },
     },
   },
 }
