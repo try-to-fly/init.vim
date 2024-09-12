@@ -23,7 +23,19 @@ return {
           show_hidden = true,
           is_always_hidden = function(name, bufnr)
             -- 忽略.DS_Store文件
-            return name:match("%.DS_Store")
+            if name:match("%.DS_Store") then
+              return true
+            end
+            -- 忽略父目录
+            if name:match("^%.%.$") then
+              return true
+            end
+            -- 忽略.git目录
+            if name:match("^%.git$") then
+              return true
+            end
+
+            return false
           end,
         },
       })
