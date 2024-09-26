@@ -9,7 +9,8 @@ return {
     },
   },
   {
-    dir = ".",
+    -- dir = ".",
+    "try-to-fly/xml-preview.nvim",
     config = function()
       require("xml_preview").setup()
     end,
