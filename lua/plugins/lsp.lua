@@ -1,6 +1,22 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        vtsls = {
+          settings = {
+            vtsls = {
+              experimental = {
+                maxInlayHintLength = 20,
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
     opts = function()
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
       -- disable a keymap
