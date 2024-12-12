@@ -17,11 +17,21 @@ return {
     "nvim-telescope/telescope.nvim",
     keys = function()
       return {
-        { "<leader>fr", LazyVim.pick("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent" },
-        { "<leader>/", LazyVim.pick("live_grep", { root = false }), desc = "Grep (Root Dir)" },
-        { "<leader>fb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
+        {
+          "<leader>,",
+          "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>",
+          desc = "Switch Buffer",
+        },
+        { "<leader>/", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
+        { "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
+
+        { "<leader>fb", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
         { "<leader>ff", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
-        { "<leader>fF", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
+        { "<leader><space>", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
+        { "<leader>fg", "<cmd>FzfLua git_files<cr>", desc = "Find Files (git-files)" },
+
+        { "<leader>fr", LazyVim.pick("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent" },
+        { "<leader>ff", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
         { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
         { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
         { "<leader>sR", "<cmd>Telescope resume<cr>", desc = "Resume" },
