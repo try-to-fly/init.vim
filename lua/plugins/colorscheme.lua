@@ -26,6 +26,9 @@ return {
   {
     "rebelot/kanagawa.nvim",
   },
+  {
+    "loctvl842/monokai-pro.nvim",
+  },
   -- {
   --   "LazyVim/LazyVim",
   --   opts = {
