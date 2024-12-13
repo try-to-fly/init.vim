@@ -1,7 +1,7 @@
 return {
   {
     "vhyrro/luarocks.nvim",
-    enabled = true,
+    enabled = false,
     priority = 1001, -- this plugin needs to run before anything else
     config = true,
     opts = {
@@ -11,6 +11,7 @@ return {
   {
     -- dir = ".",
     "try-to-fly/xml-preview.nvim",
+    enabled = false,
     config = function()
       require("xml_preview").setup()
     end,
