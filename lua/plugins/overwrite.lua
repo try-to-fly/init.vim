@@ -14,43 +14,6 @@ return {
     },
   },
   {
-    "nvim-telescope/telescope.nvim",
-    keys = function()
-      return {
-        {
-          "<leader>,",
-          "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>",
-          desc = "Switch Buffer",
-        },
-        { "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
-
-        { "<leader>fb", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
-        { "<leader>ff", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
-        { "<leader><space>", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
-        { "<leader>fg", "<cmd>FzfLua git_files<cr>", desc = "Find Files (git-files)" },
-
-        { "<leader>fr", LazyVim.pick("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent" },
-        { "<leader>ff", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
-        { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
-        { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
-        { "<leader>sR", "<cmd>Telescope resume<cr>", desc = "Resume" },
-        { "<leader>fw", LazyVim.pick("grep_string", { word_match = "-w" }), desc = "Word (root dir)" },
-        { "<leader>fw", LazyVim.pick("grep_string"), mode = "v", desc = "Selection (root dir)" },
-        { "<leader>fc", LazyVim.pick("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
-        { "<leader>fd", "<cmd>Telescope search_folders<CR>", desc = "文件夹列表" },
-        {
-          "<leader>ss",
-          function()
-            require("telescope.builtin").lsp_document_symbols({
-              symbols = require("lazyvim.config").get_kind_filter(),
-            })
-          end,
-          desc = "Goto Symbol",
-        },
-      }
-    end,
-  },
-  {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = {
