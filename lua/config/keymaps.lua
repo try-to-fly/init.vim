@@ -3,6 +3,8 @@
 -- Add any additional keymaps here
 --
 
+local LazyVim = require("lazyvim.util")
+
 vim.api.nvim_set_keymap("n", "<Leader>cb", "", {
   noremap = true,
   silent = true,
@@ -18,3 +20,5 @@ vim.api.nvim_set_keymap("n", "<Leader>cb", "", {
 vim.keymap.set("n", "<leader>sp", '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
   desc = "Search on current file",
 })
+
+vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>FzfLua live_grep_glob<CR>", { desc = "Live Grep with Dynamic Args" })
