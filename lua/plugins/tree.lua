@@ -2,7 +2,7 @@ return {
   {
     "stevearc/oil.nvim",
     opts = {},
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = { { "echasnovski/mini.icons", opts = {} } },
     config = function()
       vim.keymap.set("n", "_", "<cmd>Oil<cr>", { desc = "Open oil" })
       require("oil").setup({
@@ -43,6 +43,7 @@ return {
   },
   {
     "SirZenith/oil-vcs-status",
+    enabled = false,
     dependencies = {
       "stevearc/oil.nvim",
     },

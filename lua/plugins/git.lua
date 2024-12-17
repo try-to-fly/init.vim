@@ -17,6 +17,7 @@ return {
   },
   {
     "aaronhallaert/advanced-git-search.nvim",
+    cmd = { "AdvancedGitSearch" },
     config = function()
       require("telescope").setup({
         extensions = {

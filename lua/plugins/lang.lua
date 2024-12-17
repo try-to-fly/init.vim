@@ -2,7 +2,7 @@ return {
   {
     "mtdl9/vim-log-highlighting",
   },
-  { "prisma/vim-prisma" },
+  { "prisma/vim-prisma", ft = "prisma" },
   {
     "cameron-wags/rainbow_csv.nvim",
     config = true,
