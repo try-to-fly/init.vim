@@ -3,6 +3,9 @@ return {
   dependencies = {
     { "echasnovski/mini.icons" },
   },
+  keys = {
+    ";",
+  },
   opts = {
     show_icons = true,
     separate_by_branch = true,
