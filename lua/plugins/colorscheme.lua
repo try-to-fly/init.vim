@@ -13,10 +13,11 @@ return {
   },
   {
     "tiagovla/tokyodark.nvim",
+    lazy = true,
   },
   {
     "folke/tokyonight.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     opts = {},
     config = function()
@@ -25,9 +26,11 @@ return {
   },
   {
     "rebelot/kanagawa.nvim",
+    lazy = true,
   },
   {
     "loctvl842/monokai-pro.nvim",
+    lazy = true,
   },
   -- {
   --   "LazyVim/LazyVim",
