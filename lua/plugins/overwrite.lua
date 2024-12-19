@@ -13,6 +13,7 @@ return {
       },
     },
   },
+  { "folke/which-key.nvim", opts = { preset = "classic" } },
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
