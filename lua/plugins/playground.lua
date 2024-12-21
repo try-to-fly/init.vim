@@ -1,5 +1,8 @@
 return {
   "try-to-fly/js-playground.nvim",
+  keys = {
+    "<leader>r",
+  },
   config = function()
     require("js_playground").setup_autocmds()
     vim.api.nvim_set_keymap(

@@ -1,6 +1,7 @@
 return {
   {
     "mtdl9/vim-log-highlighting",
+    ft = "log",
   },
   { "prisma/vim-prisma", ft = "prisma" },
   {
