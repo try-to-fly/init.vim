@@ -2,6 +2,7 @@ return -- lazy.nvim
 {
   {
     "lowitea/aw-watcher.nvim",
+    enabled = vim.loop.os_uname().sysname == "Darwin",
     opts = { -- required, but can be empty table: {}
       -- add any options here
       -- for example:
