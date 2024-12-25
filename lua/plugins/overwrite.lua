@@ -13,6 +13,14 @@ return {
       },
     },
   },
+  {
+    "nvim-telescope/telescope.nvim",
+    keys = function()
+      return {
+        { "<leader>fd", "<cmd>Telescope search_folders<CR>", desc = "文件夹列表" },
+      }
+    end,
+  },
   { "folke/which-key.nvim", opts = { preset = "classic" } },
   {
     "nvim-neo-tree/neo-tree.nvim",
