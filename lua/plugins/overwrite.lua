@@ -134,15 +134,4 @@ return {
       require("telescope").load_extension("undo")
     end,
   },
-
-  {
-    "ibhagwan/fzf-lua",
-    opts = function(_, opts)
-      opts.fzf_opts = opts.fzf_opts or {}
-
-      -- 添加新的参数
-      opts.fzf_opts["--cycle"] = true
-      return opts
-    end,
-  },
 }
