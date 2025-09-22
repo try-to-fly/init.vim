@@ -1,5 +1,5 @@
 local plugin_names = {
-  "echasnovski/mini.pairs",
+  "nvim-mini/mini.pairs",
   "nvim-neo-tree/neo-tree.nvim",
   "lukas-reineke/headlines.nvim",
   "akinsho/bufferline.nvim",
