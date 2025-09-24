@@ -17,29 +17,55 @@ require("lazy").setup({
   rocks = { hererocks = true, enabled = false },
 
   defaults = {
-    -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
-    -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
-    lazy = false,
-    -- It's recommended to leave version=false for now, since a lot the plugin that support versioning,
-    -- have outdated releases, which may break your Neovim install.
+    -- 启用懒加载以提升性能
+    lazy = true,
+    -- 推荐版本策略
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight" } },
-  checker = { enabled = false }, -- automatically check for plugin updates
+  install = {
+    colorscheme = { "tokyonight", "catppuccin" },
+    missing = true, -- 自动安装缺失的插件
+  },
+  checker = { enabled = false }, -- 不启用自动更新检查
+  change_detection = {
+    enabled = true,
+    notify = false, -- 不显示文件更改通知，减少干扰
+  },
   performance = {
+    cache = {
+      enabled = true,
+    },
+    reset_packpath = true, -- 重置包路径以提升性能
     rtp = {
-      -- disable some rtp plugins
+      -- 禁用更多不必要的内置插件
       disabled_plugins = {
         "gzip",
-        -- "matchit",
-        -- "matchparen",
-        -- "netrwPlugin",
+        "matchit",
+        "matchparen",
+        "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",
         "zipPlugin",
+        "rplugin", -- 禁用远程插件支持
+        "syntax", -- 使用 treesitter 替代内置语法高亮
+        "synmenu",
+        "optwin",
+        "compiler",
+        "bugreport",
+        "ftplugin",
       },
     },
+  },
+  ui = {
+    size = { width = 0.8, height = 0.8 },
+    wrap = true, -- 在 UI 中换行
+    border = "rounded",
+  },
+  dev = {
+    path = "~/projects", -- 开发插件的路径
+    patterns = {}, -- 开发模式匹配模式
+    fallback = false, -- 如果找不到本地插件，不回退到 git
   },
 })
