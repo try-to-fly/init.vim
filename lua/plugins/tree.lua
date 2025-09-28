@@ -77,10 +77,10 @@ return {
         },
         use_default_keymaps = true,
         view_options = {
-          show_hidden = false, -- 默认不显示隐藏文件，用 g. 切换
-          is_hidden_file = function(name, bufnr)
-            return vim.startswith(name, ".")
-          end,
+          show_hidden = true, -- 默认不显示隐藏文件，用 g. 切换
+          -- is_hidden_file = function(name, bufnr)
+          --   return vim.startswith(name, ".")
+          -- end,
           is_always_hidden = function(name, bufnr)
             -- 始终隐藏的文件
             local always_hidden = {
