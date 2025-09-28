@@ -4,6 +4,7 @@ return {
   keys = {
     { "<leader>Rs", "<cmd>lua require('kulala').run()<cr>", desc = "Send request" },
     { "<leader>Ra", "<cmd>lua require('kulala').run_all()<cr>", desc = "Send all requests" },
+    { "<leader>Rr", "<cmd>lua require('kulala').replay()<cr>", desc = "Replay last request" },
     { "<leader>Rb", "<cmd>lua require('kulala').scratchpad()<cr>", desc = "Open scratchpad" },
     { "<leader>Rc", "<cmd>lua require('kulala').copy()<cr>", desc = "Copy request as cURL" },
     { "<leader>Ri", "<cmd>lua require('kulala').import()<cr>", desc = "Import from cURL" },
