@@ -11,6 +11,13 @@ return {
           { section = "startup" },
         },
       },
+      picker = {
+        sources = {
+          files = {
+            hidden = true, -- 默认显示隐藏文件，包括 .env 等
+          },
+        },
+      },
     },
   },
 }
