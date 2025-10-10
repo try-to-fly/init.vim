@@ -56,7 +56,7 @@ return {
           ["g."] = "actions.toggle_hidden",
           ["g\\"] = "actions.toggle_trash",
           -- 复制文件名和路径的快捷键
-          ["yy"] = "actions.copy_entry_filename", -- 复制文件名
+          ["ym"] = "actions.copy_entry_filename", -- 复制文件名
           ["yp"] = "actions.copy_entry_path", -- 复制绝对路径
           ["yr"] = { -- 复制相对路径 (自定义实现)
             callback = function()
