@@ -4,6 +4,43 @@
 
 local LazyVim = require("lazyvim.util")
 
+-- 复制路径到系统剪贴板的辅助函数
+local function copy_path(opts)
+  opts = opts or {}
+  local bufname = vim.api.nvim_buf_get_name(0)
+  if bufname == "" then
+    vim.notify("当前缓冲区没有关联的文件", vim.log.levels.WARN)
+    return
+  end
+
+  local text
+  if opts.type == "relative" then
+    local root = LazyVim.root()
+    if root and root ~= "" then
+      local normalized_buf = LazyVim.norm(bufname)
+      local normalized_root = LazyVim.norm(root)
+      if normalized_buf and normalized_root and normalized_buf:find(normalized_root, 1, true) == 1 then
+        text = normalized_buf:sub(#normalized_root + 2)
+      end
+    end
+    if not text or text == "" or text == bufname then
+      text = vim.fn.fnamemodify(bufname, ":.")
+    end
+  elseif opts.type == "absolute" then
+    text = vim.fn.fnamemodify(bufname, ":p")
+  elseif opts.type == "filename" then
+    text = vim.fn.fnamemodify(bufname, ":t")
+  end
+
+  if not text or text == "" then
+    vim.notify("未能获取需要复制的路径", vim.log.levels.ERROR)
+    return
+  end
+
+  vim.fn.setreg("+", text)
+  vim.notify(string.format("已复制%s: %s", opts.label or "路径", text))
+end
+
 -- ===== 编辑增强 =====
 -- 快速插入代码块
 vim.api.nvim_set_keymap("n", "<Leader>cb", "", {
@@ -47,19 +84,18 @@ vim.keymap.set({ "n", "v" }, "L", "$", { desc = "Go to line end" })
 
 -- ===== 实用工具 =====
 
--- 复制文件路径
-vim.keymap.set("n", "<leader>fp", function()
-  local path = vim.fn.expand("%:p")
-  vim.fn.setreg("+", path)
-  vim.notify("Copied path: " .. path)
-end, { desc = "Copy file path" })
-
 -- 复制相对路径
-vim.keymap.set("n", "<leader>fr", function()
-  local path = vim.fn.expand("%")
-  vim.fn.setreg("+", path)
-  vim.notify("Copied relative path: " .. path)
-end, { desc = "Copy relative path" })
+vim.keymap.set("n", "<leader>yr", function()
+  copy_path({ type = "relative", label = "相对路径" })
+end, { desc = "复制项目相对路径" })
+
+vim.keymap.set("n", "<leader>ya", function()
+  copy_path({ type = "absolute", label = "绝对路径" })
+end, { desc = "复制绝对路径" })
+
+vim.keymap.set("n", "<leader>yp", function()
+  copy_path({ type = "filename", label = "文件名" })
+end, { desc = "复制文件名" })
 
 -- ===== 终端操作 =====
 
