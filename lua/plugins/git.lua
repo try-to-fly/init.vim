@@ -2,19 +2,22 @@ local Util = require("lazyvim.util")
 return {
   {
     "f-person/git-blame.nvim",
-    config = function()
-      vim.g.gitblame_enabled = 0
-      vim.g.gitblame_date_format = "%r"
-    end,
+    event = "VeryLazy",
+    opts = {
+      -- your configuration comes here
+      -- for example
+      enabled = true, -- if you want to enable the plugin
+      message_template = " <summary> • <date> • <author> • <<sha>>", -- template for the blame message, check the Message template section for more options
+      date_format = "%Y-%m-%d %H:%M:%S", -- template for the date, check Date format section for more options
+      virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
+    },
   },
-  {
-    "FabijanZulj/blame.nvim",
-    config = function()
-      require("blame").setup({
-        date_format = "%m.%d",
-      })
-    end,
-  },
+  -- {
+  --   "FabijanZulj/blame.nvim",
+  --   config = function()
+  --     require("blame").setup()
+  --   end,
+  -- },
   {
     "aaronhallaert/advanced-git-search.nvim",
     cmd = { "AdvancedGitSearch" },
