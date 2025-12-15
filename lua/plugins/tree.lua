@@ -92,6 +92,8 @@ return {
               "__pycache__$",
               "%.pyc$",
               "%.pyo$",
+              "tsconfig.tsbuildinfo",
+              ".vscode",
             }
 
             for _, pattern in ipairs(always_hidden) do
