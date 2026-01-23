@@ -57,4 +57,49 @@ return {
       require("mini.git").setup()
     end,
   },
+  -- Git Worktree 管理
+  {
+    "polarmutex/git-worktree.nvim",
+    version = "^2",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+    config = function()
+      local Hooks = require("git-worktree.hooks")
+      local config = require("git-worktree.config")
+
+      -- 切换 worktree 时更新缓冲区
+      Hooks.register(Hooks.type.SWITCH, function(path, prev_path)
+        vim.notify("从 " .. prev_path .. " 切换到 " .. path)
+        Hooks.builtins.update_current_buffer_on_switch(path, prev_path)
+      end)
+
+      -- 删除 worktree 时刷新
+      Hooks.register(Hooks.type.DELETE, function()
+        vim.cmd(config.update_on_change_command)
+      end)
+
+      -- 加载 Telescope 扩展
+      require("telescope").load_extension("git_worktree")
+    end,
+    keys = {
+      {
+        "<leader>gwl",
+        "<cmd>Telescope git_worktree<cr>",
+        desc = "列出 Worktrees",
+      },
+      {
+        "<leader>gwc",
+        function()
+          require("git-worktree").create_worktree(
+            vim.fn.input("Worktree 路径: "),
+            vim.fn.input("分支名: "),
+            "origin"
+          )
+        end,
+        desc = "创建 Worktree",
+      },
+    },
+  },
 }
