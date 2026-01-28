@@ -11,7 +11,7 @@
 Clone the repository and install the plugins:
 
 ```sh
-git clone git@github.com:try-to-fly/init.vim ~/.config/try-to-fly/init.vim
+git clone git@github.com:try-to-fly/init.vim ~/.config/nvim
 ```
 
 Open Neovim with this config:
