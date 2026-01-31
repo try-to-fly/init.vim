@@ -7,8 +7,13 @@ vim.o.wrap = true
 
 vim.opt.scrolloff = 5
 
--- 判断是否是Linux环境
-if vim.loop.os_uname().sysname == "Linux" then
+-- 检测是否在 SSH 环境中
+local function is_ssh_session()
+  return vim.env.SSH_CONNECTION ~= nil or vim.env.SSH_TTY ~= nil
+end
+
+-- 在 SSH 环境中使用 OSC 52 协议
+if is_ssh_session() then
   vim.o.clipboard = "unnamedplus"
   vim.g.clipboard = {
     name = "OSC 52",
