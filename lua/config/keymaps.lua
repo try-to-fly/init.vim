@@ -65,6 +65,9 @@ vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines" })
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result" })
 
+-- 禁用宏录制，避免误按 q 进入 recording 状态
+vim.keymap.set("n", "q", "<Nop>", { desc = "Disable macro recording" })
+
 -- ===== 搜索和替换 =====
 -- 注意: 这些快捷键需要 nvim-spectre 插件
 -- 如果插件未安装，请先在 lua/plugins/editor.lua 中添加该插件
