@@ -13,7 +13,7 @@ return {
         "<leader>gj",
         "<cmd>Telescope jsonfly<cr>",
         desc = "Open json(fly)",
-        ft = { "json" },
+        ft = { "json", "json5" },
         mode = "n",
       },
     },

@@ -5,6 +5,13 @@
 vim.o.clipboard = "unnamed"
 vim.o.wrap = true
 
+-- openclaw.json 实际上使用的是 JSON5 语法
+vim.filetype.add({
+  filename = {
+    ["openclaw.json"] = "json5",
+  },
+})
+
 vim.opt.scrolloff = 5
 
 -- 检测是否在 SSH 环境中
