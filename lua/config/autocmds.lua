@@ -5,6 +5,13 @@ local function augroup(name)
   return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
 end
 
+-- Make sure dotenv variants like `.env.local` keep shell-style comments.
+vim.filetype.add({
+  pattern = {
+    ["%.env%.[%w_.-]+"] = "sh",
+  },
+})
+
 vim.api.nvim_create_autocmd("FileType", {
   group = augroup("wrap_spell"),
   pattern = { "gitcommit", "markdown" },
@@ -30,6 +37,7 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufReadPost" }, {
   group = lsp_hacks,
   pattern = ".env*",
   callback = function(e)
+    vim.bo[e.buf].commentstring = "# %s"
     vim.diagnostic.enable(false, { bufnr = e.buf })
   end,
 })
