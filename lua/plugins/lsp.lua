@@ -13,6 +13,7 @@ return {
     opts = {
       servers = {
         nil_ls = {
+          mason = false,
           settings = {
             ["nil"] = {
               nix = {
